@@ -1,0 +1,127 @@
+import streamlit as st
+
+st.set_page_config(page_title="Rianaditro",
+                   layout="wide",
+                   menu_items={
+                       "Get Help": "https://wa.me/6289669249279?text=Can%20we%20talk%20about%20working%20together?"
+                   })
+
+
+st.markdown("""
+    <style>
+    button[title="View fullscreen"]{
+        visibility: hidden;
+    }
+                        
+    .title {
+        text-align: center;
+    }
+            
+    .timeline {
+        list-style: none;
+        position: relative;
+        padding-left: 40px;
+    }
+
+    .timeline:before {
+        content: '';
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 20px;
+        width: 4px;
+        background: #ddd;
+    }
+
+    .timeline li {
+        position: relative;
+        margin-bottom: 20px;
+    }
+
+    .timeline li:before {
+        content: '●';
+        position: absolute;
+        left: -12px;
+        top: 0;
+        font-size: 20px;
+        color: #3498db;
+    }
+
+    .timeline li strong {
+        font-weight: bold;
+        color: #2c3e50;
+    }
+    </style>
+            """,
+            unsafe_allow_html=True)
+
+
+with st.sidebar:
+    st.image("assets/profile.jpeg")
+    st.info("rianaditro@gmail.com")
+    st.link_button("Contact Me", "https://wa.me/6289669249279?text=Can%20we%20talk%20about%20working%20together?")
+
+
+st.html("<h1>Hi,<br>I'm Rian Adi Saputro</h1>")
+st.write("Python Developer specialize in data extraction, processing, analysis, and data mining, transforming raw data into actionable insights. I also work with web-based machine learning, integrating models into apps for smarter, scalable solutions. Always exploring new ways to solve problems with data!")
+
+st.divider()
+
+st.html("<h1 class='title'>My Skills</h1>")
+
+skill1, skill2, skill3, skill4, skill5 = st.columns(5)
+
+with skill1:
+    st.image("https://cdn-icons-png.flaticon.com/64/5968/5968350.png")
+
+with skill2:
+    st.image("https://cdn-icons-png.flaticon.com/64/5968/5968267.png")
+
+with skill3:
+    st.image("assets/streamlit.png", use_column_width=True)
+
+with skill4:
+    st.image("assets/scikit.png", use_column_width=True)
+
+with skill5:
+    st.image("https://cdn-icons-png.flaticon.com/64/5968/5968292.png")
+
+st.divider()
+
+st.html("<h1 class='title'>My Projects</h1>")
+
+st.image([
+    "assets/myprojects/project1.png",
+    "assets/myprojects/project2.png",
+    "assets/myprojects/project1.png",
+    "assets/myprojects/project2.png",
+    "assets/myprojects/project1.png",
+    "assets/myprojects/project2.png",
+], width=200,caption=["Project 1", "Project 2", "Project 3", "Project 4", "Project 5", "Project 6"])
+
+st.divider()
+
+st.html("<h1 class='title'>My History</h1>")
+
+st.markdown("""
+<ul class='timeline'>
+    <li><strong>2024 - Present:</strong> Freelance Python Developer</li>
+    <li><strong>2023 - Present:</strong> Member of Remote Worker Indonesia</li>
+    <li><strong>2022 - 2023:</strong> Data Entry at Ninja Xpress Jepara</li>
+    <li><strong>2021 - 2021:</strong> Student at Bangkit Academy 2021 - Cloud Computing Learning Path</li>
+    <li><strong>2017 - 2022:</strong> Undergraduate student at Universitas Islam Nahdlatul Ulama Jepara</li>
+</ul>
+""", unsafe_allow_html=True)
+
+st.divider()
+
+st.html("<h1 class='title'>Find more about me!</h1>")
+
+url1, url2, url3, url4, url5 = st.columns(5)
+
+url1.link_button("GitHub", "https://github.com/rianaditro")
+url2.link_button("LinkedIn", "https://www.linkedin.com/in/rianaditro/")
+url3.link_button("Medium", "https://medium.com/@rianaditro")
+url4.link_button("Fastwork", "https://fastwork.id/user/rianaditro")
+url5.link_button("Upwork", "https://www.upwork.com/freelancers/~01ffba4c460505aeab?mp_source=share")
+
