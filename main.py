@@ -1,7 +1,7 @@
 import streamlit as st
 
 st.set_page_config(page_title="Rianaditro",
-                   layout="wide",
+                   layout="centered",
                    menu_items={
                        "Get Help": "https://wa.me/6289669249279?text=Can%20we%20talk%20about%20working%20together?"
                    })
@@ -9,12 +9,20 @@ st.set_page_config(page_title="Rianaditro",
 
 st.markdown("""
     <style>
+    section[data-testid="stSidebar"] {
+        width: 220px !important; # Set the width to your desired value
+    }
     button[title="View fullscreen"]{
         visibility: hidden;
     }
                         
     .title {
         text-align: center;
+    }
+            
+    a {
+        text-decoration: none;
+        color: white;
     }
             
     .timeline {
@@ -57,9 +65,12 @@ st.markdown("""
 
 
 with st.sidebar:
-    st.image("assets/profile.jpeg")
+    st.image("assets/profile.jpeg", width=200)
     st.info("rianaditro@gmail.com")
-    st.link_button("Contact Me", "https://wa.me/6289669249279?text=Can%20we%20talk%20about%20working%20together?")
+    st.link_button(label="Contact Me", 
+                   url="https://wa.me/6289669249279?text=Can%20we%20talk%20about%20working%20together?",
+                   help="Send me a Whatsapp message",
+                   type="primary")
 
 
 st.html("<h1>Hi,<br>I'm Rian Adi Saputro</h1>")
@@ -90,18 +101,82 @@ st.divider()
 
 st.html("<h1 class='title'>My Projects</h1>")
 
-st.image([
-    "assets/myprojects/project1.png",
-    "assets/myprojects/project2.png",
-    "assets/myprojects/project1.png",
-    "assets/myprojects/project2.png",
-    "assets/myprojects/project1.png",
-    "assets/myprojects/project2.png",
-], width=200,caption=["Project 1", "Project 2", "Project 3", "Project 4", "Project 5", "Project 6"])
+project1, project2, project3 = st.columns(3)
+
+with project1:
+    st.image("assets/myprojects/project1.png", use_column_width=True)
+    st.html("""
+                <h6 class='title'>
+                    <a href='#'>
+                        Data Scraping
+                        <p>Bypass human verification</p>
+                    </a>
+                </h6>
+                """)
+
+with project2:
+    st.image("assets/myprojects/project2.jpg", use_column_width=True)
+    st.html("""
+                <h6 class='title'>
+                    <a href='#'>
+                        Flask Web App
+                        <p>Clone web app from scraping</p>
+                    </a>
+                </h6>
+                """)
+
+
+with project3:
+    st.image("assets/myprojects/project3.jpg", use_column_width=True)
+    st.html("""
+                <h6 class='title'>
+                    <a href='#'>
+                        Streamlit Web App
+                        <p>Server monitoring using automated scraper</p>
+                    </a>
+                </h6>
+                """)
+
+project4, project5, project6 = st.columns(3)
+
+with project4:
+    st.image("assets/myprojects/project4.jpg", use_column_width=True)
+    st.html("""
+                <h6 class='title'>
+                    <a href='#'>
+                        Machine Learning Web App
+                        <p>Classification using Decision Tree and KNN and web-based model training</p>
+                    </a>
+                </h6>
+                """)
+
+with project5:
+    st.image("assets/myprojects/project5.jpg", use_column_width=True)
+    st.html("""
+                <h6 class='title'>
+                    <a href='#'>
+                        Google Apps Script
+                        <p>Automated invoice generation</p>
+                    </a>
+                </h6>
+                """)
+
+
+with project6:
+    st.image("assets/myprojects/project6.png", use_column_width=True)
+    st.html("""
+                <h6 class='title'>
+                    <a href='#'>
+                        Google Cloud Platform
+                        <p>Forecasting Covid-19 using BigQueryML and Looker Studio</p>
+                    </a>
+                </h6>
+                """)
+
 
 st.divider()
 
-st.html("<h1 class='title'>My History</h1>")
+st.html("<h1 class='title'>My Experience</h1>")
 
 st.markdown("""
 <ul class='timeline'>
@@ -119,9 +194,9 @@ st.html("<h1 class='title'>Find more about me!</h1>")
 
 url1, url2, url3, url4, url5 = st.columns(5)
 
-url1.link_button("GitHub", "https://github.com/rianaditro")
-url2.link_button("LinkedIn", "https://www.linkedin.com/in/rianaditro/")
-url3.link_button("Medium", "https://medium.com/@rianaditro")
-url4.link_button("Fastwork", "https://fastwork.id/user/rianaditro")
-url5.link_button("Upwork", "https://www.upwork.com/freelancers/~01ffba4c460505aeab?mp_source=share")
+url1.link_button("GitHub", "https://github.com/rianaditro", use_container_width=True)
+url2.link_button("LinkedIn", "https://www.linkedin.com/in/rianaditro/", use_container_width=True)
+url3.link_button("Medium", "https://medium.com/@rianaditro", use_container_width=True)
+url4.link_button("Fastwork", "https://fastwork.id/user/rianaditro", use_container_width=True)
+url5.link_button("Upwork", "https://www.upwork.com/freelancers/~01ffba4c460505aeab?mp_source=share", use_container_width=True)
 
