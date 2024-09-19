@@ -18,6 +18,7 @@ st.markdown("""
                         
     .title {
         text-align: center;
+        color: black;
     }
             
     a {
@@ -52,12 +53,12 @@ st.markdown("""
         left: -12px;
         top: 0;
         font-size: 20px;
-        color: #3498db;
+        color: black;
     }
 
     .timeline li strong {
         font-weight: bold;
-        color: #2c3e50;
+        color: green;
     }
     </style>
             """,
@@ -66,7 +67,7 @@ st.markdown("""
 
 with st.sidebar:
     st.image("assets/profile.jpeg", width=200)
-    st.info("rianaditro@gmail.com")
+    st.success("rianaditro@gmail.com")
     st.link_button(label="Contact Me", 
                    url="https://wa.me/6289669249279?text=Can%20we%20talk%20about%20working%20together?",
                    help="Send me a Whatsapp message",
@@ -107,7 +108,7 @@ with project1:
     st.image("assets/myprojects/project1.png", use_column_width=True)
     st.html("""
                 <h6 class='title'>
-                    <a href='#'>
+                    <a style='color: black;' href='#'>
                         Data Scraping
                         <p>Bypass human verification</p>
                     </a>
@@ -118,7 +119,7 @@ with project2:
     st.image("assets/myprojects/project2.jpg", use_column_width=True)
     st.html("""
                 <h6 class='title'>
-                    <a href='#'>
+                    <a style='color: black;' href='#'>
                         Flask Web App
                         <p>Clone web app from scraping</p>
                     </a>
@@ -130,7 +131,7 @@ with project3:
     st.image("assets/myprojects/project3.jpg", use_column_width=True)
     st.html("""
                 <h6 class='title'>
-                    <a href='#'>
+                    <a style='color: black;' href='#'>
                         Streamlit Web App
                         <p>Server monitoring using automated scraper</p>
                     </a>
@@ -143,7 +144,7 @@ with project4:
     st.image("assets/myprojects/project4.jpg", use_column_width=True)
     st.html("""
                 <h6 class='title'>
-                    <a href='#'>
+                    <a style='color: black;' href='#'>
                         Machine Learning Web App
                         <p>Classification using Decision Tree and KNN and web-based model training</p>
                     </a>
@@ -154,7 +155,7 @@ with project5:
     st.image("assets/myprojects/project5.jpg", use_column_width=True)
     st.html("""
                 <h6 class='title'>
-                    <a href='#'>
+                    <a style='color: black;' href='#'>
                         Google Apps Script
                         <p>Automated invoice generation</p>
                     </a>
@@ -166,7 +167,7 @@ with project6:
     st.image("assets/myprojects/project6.png", use_column_width=True)
     st.html("""
                 <h6 class='title'>
-                    <a href='#'>
+                    <a style='color: black;' href='#'>
                         Google Cloud Platform
                         <p>Forecasting Covid-19 using BigQueryML and Looker Studio</p>
                     </a>
@@ -194,9 +195,9 @@ st.html("<h1 class='title'>Find more about me!</h1>")
 
 url1, url2, url3, url4, url5 = st.columns(5)
 
-url1.link_button("GitHub", "https://github.com/rianaditro", use_container_width=True)
-url2.link_button("LinkedIn", "https://www.linkedin.com/in/rianaditro/", use_container_width=True)
-url3.link_button("Medium", "https://medium.com/@rianaditro", use_container_width=True)
-url4.link_button("Fastwork", "https://fastwork.id/user/rianaditro", use_container_width=True)
-url5.link_button("Upwork", "https://www.upwork.com/freelancers/~01ffba4c460505aeab?mp_source=share", use_container_width=True)
+url1.link_button("GitHub", "https://github.com/rianaditro", use_container_width=True, type="primary")
+url2.link_button("LinkedIn", "https://www.linkedin.com/in/rianaditro/", use_container_width=True, type="primary")
+url3.link_button("Medium", "https://medium.com/@rianaditro", use_container_width=True, type="primary")
+url4.link_button("Fastwork", "https://fastwork.id/user/rianaditro", use_container_width=True, type="primary")
+url5.link_button("Upwork", "https://www.upwork.com/freelancers/~01ffba4c460505aeab?mp_source=share", use_container_width=True, type="primary")
 
