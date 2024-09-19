@@ -68,11 +68,19 @@ st.markdown("""
 
 with st.sidebar:
     st.image("assets/profile.jpeg", width=200)
+    st.html("<h3 class='title'>Rian | Python Developer</h3>")
+
+    st.divider()
+
+    st.write("Feel free to ask me anything!")
+    
     st.success("rianaditro@gmail.com")
     st.link_button(label="Contact Me", 
                    url="https://wa.me/6289669249279?text=Can%20we%20talk%20about%20working%20together?",
                    help="Send me a Whatsapp message",
                    type="primary")
+
+    
 
 
 st.html("<h1>Hi,<br>I'm Rian Adi Saputro</h1>")
@@ -109,7 +117,7 @@ with project1:
     st.image("assets/myprojects/project1.png", use_column_width=True)
     st.html("""
                 <h6 class='title'>
-                    <a style='color: black;' href='#'>
+                    <a style='color: black;' href='https://www.linkedin.com/posts/rianaditro_datascraping-python-requests-activity-7164387257091575808-RWpc?utm_source=share&utm_medium=member_desktop' target='_blank'>
                         Data Scraping
                         <p>Bypass human verification</p>
                     </a>
@@ -120,7 +128,7 @@ with project2:
     st.image("assets/myprojects/project2.jpg", use_column_width=True)
     st.html("""
                 <h6 class='title'>
-                    <a style='color: black;' href='#'>
+                    <a style='color: black;' href='https://rianaditro.pythonanywhere.com/catalog' target='_blank'>
                         Flask Web App
                         <p>Clone web app from scraping</p>
                     </a>
@@ -132,7 +140,7 @@ with project3:
     st.image("assets/myprojects/project3.jpg", use_column_width=True)
     st.html("""
                 <h6 class='title'>
-                    <a style='color: black;' href='#'>
+                    <a style='color: black;' href='https://dashboardreport.streamlit.app/' target='_blank'>
                         Streamlit Web App
                         <p>Server monitoring using automated scraper</p>
                     </a>
@@ -145,7 +153,7 @@ with project4:
     st.image("assets/myprojects/project4.jpg", use_column_width=True)
     st.html("""
                 <h6 class='title'>
-                    <a style='color: black;' href='#'>
+                    <a style='color: black;' href='https://prediksibabi.streamlit.app/' target='_blank'>
                         Machine Learning Web App
                         <p>Classification using Decision Tree and KNN and web-based model training</p>
                     </a>
@@ -156,7 +164,7 @@ with project5:
     st.image("assets/myprojects/project5.jpg", use_column_width=True)
     st.html("""
                 <h6 class='title'>
-                    <a style='color: black;' href='#'>
+                    <a style='color: black;' href='https://github.com/rianaditro/invoice_automation/tree/main' target='_blank'>
                         Google Apps Script
                         <p>Automated invoice generation</p>
                     </a>
@@ -168,7 +176,7 @@ with project6:
     st.image("assets/myprojects/project6.png", use_column_width=True)
     st.html("""
                 <h6 class='title'>
-                    <a style='color: black;' href='#'>
+                    <a style='color: black;' href='https://www.linkedin.com/posts/rianaditro_project-peramalan-kasus-covid-19-di-indonesia-activity-7064940704359186432-nmPB?utm_source=share&utm_medium=member_desktop' target='_blank'>
                         Google Cloud Platform
                         <p>Forecasting Covid-19 using BigQueryML and Looker Studio</p>
                     </a>
@@ -183,10 +191,10 @@ st.html("<h1 class='title'>My Experience</h1>")
 st.markdown("""
 <ul class='timeline'>
     <li><strong>2024 - Present:</strong> Freelance Python Developer</li>
-    <li><strong>2023 - Present:</strong> Member of <a href='https://www.linkedin.com/company/remote-worker-indonesia/'>Remote Worker Indonesia</a></li>
+    <li><strong>2023 - Present:</strong> Member of <a href='https://www.linkedin.com/company/remote-worker-indonesia/' target='_blank'>Remote Worker Indonesia</a></li>
     <li><strong>2022 - 2023:</strong> Data Entry at Ninja Xpress Jepara</li>
-    <li><strong>2021 - 2021:</strong> Student at <a href='https://grow.google/intl/id_id/bangkit/?tab=cloud-computing'>Bangkit Academy 2021</a> - Cloud Computing Learning Path</li>
-    <li><strong>2020 - 2021:</strong> Student at <a href='https://www.dicoding.com/users/rianadisaputro/academies'>Dicoding Academy</a></li>
+    <li><strong>2021 - 2021:</strong> Student at <a href='https://grow.google/intl/id_id/bangkit/?tab=cloud-computing' target='_blank'>Bangkit Academy 2021</a> - Cloud Computing Learning Path</li>
+    <li><strong>2020 - 2021:</strong> Student at <a href='https://www.dicoding.com/users/rianadisaputro/academies' target='_blank'>Dicoding Academy</a></li>
     <li><strong>2017 - 2022:</strong> Undergraduate student at Universitas Islam Nahdlatul Ulama Jepara</li>
 </ul>
 """, unsafe_allow_html=True)
@@ -208,11 +216,11 @@ url5.link_button("Upwork", "https://www.upwork.com/freelancers/~01ffba4c460505ae
 st.divider()
 
 st.html("<h1 class='title'>Feeling lost?</h1>")
-st.html("<p class='title'>Ask me anything</p>")
+st.html("<p class='title'>Chatbot ready to help</p>")
 
 with st.container():
 
-    prompt = st.chat_input("Ask me anything......")
+    prompt = st.chat_input("Ask bot anything......")
     response = """
                 I'm sorry, this feature is under development. 
                 Feel free to ask me anything via email: rianaditro@gmail.com 
