@@ -1,4 +1,5 @@
 import streamlit as st
+import time
 
 st.set_page_config(page_title="Rianaditro",
                    layout="centered",
@@ -182,9 +183,10 @@ st.html("<h1 class='title'>My Experience</h1>")
 st.markdown("""
 <ul class='timeline'>
     <li><strong>2024 - Present:</strong> Freelance Python Developer</li>
-    <li><strong>2023 - Present:</strong> Member of Remote Worker Indonesia</li>
+    <li><strong>2023 - Present:</strong> Member of <a href='https://www.linkedin.com/company/remote-worker-indonesia/'>Remote Worker Indonesia</a></li>
     <li><strong>2022 - 2023:</strong> Data Entry at Ninja Xpress Jepara</li>
-    <li><strong>2021 - 2021:</strong> Student at Bangkit Academy 2021 - Cloud Computing Learning Path</li>
+    <li><strong>2021 - 2021:</strong> Student at <a href='https://grow.google/intl/id_id/bangkit/?tab=cloud-computing'>Bangkit Academy 2021</a> - Cloud Computing Learning Path</li>
+    <li><strong>2020 - 2021:</strong> Student at <a href='https://www.dicoding.com/users/rianadisaputro/academies'>Dicoding Academy</a></li>
     <li><strong>2017 - 2022:</strong> Undergraduate student at Universitas Islam Nahdlatul Ulama Jepara</li>
 </ul>
 """, unsafe_allow_html=True)
@@ -192,6 +194,7 @@ st.markdown("""
 st.divider()
 
 st.html("<h1 class='title'>Find more about me!</h1>")
+st.html("<p class='title'>A high rehire rate at Fastwork, rising talent at Upwork, a writer and many more...</p>")
 
 url1, url2, url3, url4, url5 = st.columns(5)
 
@@ -201,3 +204,51 @@ url3.link_button("Medium", "https://medium.com/@rianaditro", use_container_width
 url4.link_button("Fastwork", "https://fastwork.id/user/rianaditro", use_container_width=True, type="primary")
 url5.link_button("Upwork", "https://www.upwork.com/freelancers/~01ffba4c460505aeab?mp_source=share", use_container_width=True, type="primary")
 
+
+st.divider()
+
+st.html("<h1 class='title'>Feeling lost?</h1>")
+st.html("<p class='title'>Ask me anything</p>")
+
+with st.container():
+
+    prompt = st.chat_input("Ask me anything......")
+    response = """
+                I'm sorry, this feature is under development. 
+                Feel free to ask me anything via email: rianaditro@gmail.com 
+                or via WhatsApp: https://wa.me/6289669249279
+            """
+
+    def stream_response():
+        for word in response.split(" "):
+            yield word + " "
+            time.sleep(0.02)
+
+    if prompt:
+        with st.chat_message("user"):
+            st.write(prompt)
+
+        with st.chat_message("assistant"):
+            st.write_stream(stream_response)
+
+
+
+st.markdown("""
+    <style>
+    .chatbot-button {
+        position: fixed;
+        bottom: 40px;
+        right: 40px;
+        background-color: #3498db;
+        color: white;
+        padding: 10px 20px;
+        border-radius: 50px;
+        border: none;
+        cursor: pointer;
+    }
+    </style>
+            
+    <a href="https://wa.me/6289669249279?text=Can%20we%20talk%20about%20working%20together?">
+        <button class="chatbot-button">Chat with me!</button>
+    </a>
+    """, unsafe_allow_html=True)

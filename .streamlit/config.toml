@@ -8,10 +8,10 @@ base = "light"
 primaryColor = "green"
 
 # Background color for the main content area.
-backgroundColor = "white"
+backgroundColor = "#FFFFFF"
 
 # Background color used for the sidebar and most interactive widgets.
-secondaryBackgroundColor = "white"
+secondaryBackgroundColor = "#F0FFF0"
 
 # Color used for almost all text.
 textColor = "black"
